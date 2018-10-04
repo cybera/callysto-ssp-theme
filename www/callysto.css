@@ -1,0 +1,63 @@
+h1 {
+  font-family: 'Nunito Sans', sans-serif;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #FF6700;
+}
+
+body {
+  padding: 15px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+button.authsource {
+  border: 0; 
+  background: transparent;
+  font-size: small;
+}
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  text-align: center;
+}
+
+li.authsource {
+  display: inline-block;
+  float: none;
+  list-style-type: none;
+  padding: 20px;
+  vertical-align: bottom;
+}
+
+p.register {
+  font-weight: 700;
+  font-size: large;
+}
+
+img.idpselect_img {
+  float: left;
+  padding-right: 100px;
+}
+
+form.idpselect_form {
+  padding-top: 50px;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+p.remember {
+  font-size: small;
+}
+
+#footer {
+  color: #A9A9A9;
+}
+
+#footer a {
+  color: #A9A9A9;
+}
+

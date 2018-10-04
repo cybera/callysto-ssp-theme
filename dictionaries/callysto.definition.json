@@ -1,0 +1,37 @@
+{
+	"welcome": {
+		"en": "Welcome to Callysto!"
+	},
+
+	"select_source_header": {
+		"en": "How would you like to sign in? Please select an authentication source:"
+	},
+
+        "select_source_text": {
+                "en": "The selected authentication source will be used to authenticate you and and to create a valid session."
+        },
+
+	"register_here_text": {
+		"en": "Register <a href=\"https://goo.gl/forms/Xa6KLKU9mi5fRxEn2\">here</a> to be notified of any upcoming service changes, and maintenance and outage windows."
+	},
+
+	"having_trouble_text": {
+		"en": "Having trouble logging in? Email Callysto’s technical support: support@callysto.ca."
+	},
+
+	"selectidp_title": {
+		"en": "Please select your identity provider."
+	},
+
+	"selectidp_text": {
+		"en": "Please select the identity provider you wish to use as your authentication source:"
+	},
+
+	"logout_title": {
+		"en": "Thank you for using Callysto."
+	},
+
+	"logout_text": {
+		"en": "You have completed the first step of logging out. Please close your web browser to complete the logout."
+	}
+}
