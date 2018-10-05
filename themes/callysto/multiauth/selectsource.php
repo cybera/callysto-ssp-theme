@@ -11,6 +11,10 @@ $this->includeAtTemplateBase('includes/header.php');
 <ul>
 <?php
 foreach($this->data['sources'] as $source) {
+	if ($source['source'] == 'mock-idp') {
+		continue;
+	}
+
 	echo '<li class="' . htmlspecialchars($source['css_class']) . ' authsource">';
 	if ($source['source'] === $this->data['preferred']) {
 		$autofocus = ' autofocus="autofocus"';
@@ -22,7 +26,7 @@ foreach($this->data['sources'] as $source) {
 	$name = 'src-' . base64_encode($source['source']);
 	echo '<button type="submit" class="authsource" name="' . htmlspecialchars($name) . 
 	     '"' . $autofocus . ' value="' . htmlspecialchars($this->t($source['text'])) . '" >
-                <img src="' . $img_url . '" alt="submit" /><br>' .
+                <img src="' . $img_url . '" height="200" alt="submit" /><br>' .
 		htmlspecialchars($this->t($source['text'])) . '
 	     </button>';
 	echo '</li>';
