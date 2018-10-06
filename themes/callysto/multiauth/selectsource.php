@@ -11,10 +11,6 @@ $this->includeAtTemplateBase('includes/header.php');
 <ul>
 <?php
 foreach($this->data['sources'] as $source) {
-	if ($source['source'] == 'mock-idp') {
-		continue;
-	}
-
 	echo '<li class="' . htmlspecialchars($source['css_class']) . ' authsource">';
 	if ($source['source'] === $this->data['preferred']) {
 		$autofocus = ' autofocus="autofocus"';
