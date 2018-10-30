@@ -1,6 +1,6 @@
 {
 	"welcome": {
-		"en": "Welcome to Callysto!"
+		"en": "Welcome to Data Science for Entrepreneurs!"
 	},
 
 	"select_source_header": {
@@ -16,7 +16,7 @@
 	},
 
 	"having_trouble_text": {
-		"en": "Having trouble logging in? Email Callysto’s technical support: support@callysto.ca."
+		"en": "Having trouble logging in? Email: datascience@cybera.ca"
 	},
 
 	"selectidp_title": {
@@ -28,7 +28,7 @@
 	},
 
 	"logout_title": {
-		"en": "Thank you for using Callysto."
+		"en": "Thank you for using Data Science for Entrepreneurs."
 	},
 
 	"logout_text": {

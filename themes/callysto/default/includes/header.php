@@ -17,13 +17,13 @@ if (array_key_exists('jquery', $this->data)) $jquery = $this->data['jquery'];
 
 if (array_key_exists('pageid', $this->data)) {
 	$hookinfo = array(
-		'pre' => &$this->data['htmlinject']['htmlContentPre'], 
-		'post' => &$this->data['htmlinject']['htmlContentPost'], 
-		'head' => &$this->data['htmlinject']['htmlContentHead'], 
-		'jquery' => &$jquery, 
+		'pre' => &$this->data['htmlinject']['htmlContentPre'],
+		'post' => &$this->data['htmlinject']['htmlContentPost'],
+		'head' => &$this->data['htmlinject']['htmlContentHead'],
+		'jquery' => &$jquery,
 		'page' => $this->data['pageid']
 	);
-		
+
 	SimpleSAML\Module::callHooks('htmlinject', $hookinfo);
 }
 // - o - o - o - o - o - o - o - o - o - o - o - o -
@@ -64,16 +64,16 @@ if(!empty($jquery)) {
 	$version = '1.8';
 	if (array_key_exists('version', $jquery))
 		$version = $jquery['version'];
-		
+
 	if ($version == '1.8') {
 		if (isset($jquery['core']) && $jquery['core'])
 			echo('<script type="text/javascript" src="/' . $this->data['baseurlpath'] . 'resources/jquery-1.8.js"></script>' . "\n");
-	
+
 		if (isset($jquery['ui']) && $jquery['ui'])
 			echo('<script type="text/javascript" src="/' . $this->data['baseurlpath'] . 'resources/jquery-ui-1.8.js"></script>' . "\n");
-	
+
 		if (isset($jquery['css']) && $jquery['css'])
-			echo('<link rel="stylesheet" media="screen" type="text/css" href="/' . $this->data['baseurlpath'] . 
+			echo('<link rel="stylesheet" media="screen" type="text/css" href="/' . $this->data['baseurlpath'] .
 				'resources/uitheme1.8/jquery-ui.css" />' . "\n");
 	}
 }
@@ -95,15 +95,15 @@ if(!empty($this->data['htmlinject']['htmlContentHead'])) {
 if ($this->isLanguageRTL()) {
 ?>
 	<link rel="stylesheet" type="text/css" href="/<?php echo $this->data['baseurlpath']; ?>resources/default-rtl.css" />
-<?php	
+<?php
 }
 ?>
 
-	
-	<meta name="robots" content="noindex, nofollow" />
-	
 
-<?php	
+	<meta name="robots" content="noindex, nofollow" />
+
+
+<?php
 if(array_key_exists('head', $this->data)) {
 	echo '<!-- head -->' . $this->data['head'] . '<!-- /head -->';
 }
@@ -115,7 +115,7 @@ if(array_key_exists('autofocus', $this->data)) {
 	$onLoad .= 'SimpleSAML_focus(\'' . $this->data['autofocus'] . '\');';
 }
 if (isset($this->data['onLoad'])) {
-	$onLoad .= $this->data['onLoad']; 
+	$onLoad .= $this->data['onLoad'];
 }
 
 if($onLoad !== '') {
@@ -125,22 +125,22 @@ if($onLoad !== '') {
 <body<?php echo $onLoad; ?>>
 
 <div id="wrap">
-	
+
 	<div id="header">
-		<a href="/"><img height="15%" width="15%" src="<?php echo SimpleSAML\Module::getModuleURL('callysto/callysto.png'); ?>"/></a>
+		<a href="/"><img height="30%" width="30%" src="<?php echo SimpleSAML\Module::getModuleURL('callysto/dsfe.jpg'); ?>"/></a>
 		<h1><?php echo (isset($this->data['header']) ? $this->data['header'] : 'SimpleSAMLphp'); ?></h1>
 	</div>
-	
-	<?php 
-	
-	$includeLanguageBar = TRUE;
-	if (!empty($_POST)) 
+
+	<?php
+
+	$includeLanguageBar = FALSE;
+	if (!empty($_POST))
 		$includeLanguageBar = FALSE;
-	if (isset($this->data['hideLanguageBar']) && $this->data['hideLanguageBar'] === TRUE) 
+	if (isset($this->data['hideLanguageBar']) && $this->data['hideLanguageBar'] === TRUE)
 		$includeLanguageBar = FALSE;
-	
+
 	if ($includeLanguageBar) {
-		
+
 		$languages = $this->getLanguageList();
 		if ( count($languages) > 1 ) {
 			echo '<div id="languagebar">';
@@ -182,7 +182,7 @@ if($onLoad !== '') {
 						'eu' => 'Euskara', // Basque
 						'af' => 'Afrikaans', // Afrikaans
 			);
-			
+
 			$textarray = array();
 			foreach ($languages AS $lang => $current) {
 				$lang = strtolower($lang);

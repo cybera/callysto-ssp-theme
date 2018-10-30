@@ -20,7 +20,7 @@ foreach($this->data['sources'] as $source) {
 	$img = htmlspecialchars($source['source']);
 	$img_url = SimpleSAML\Module::getModuleURL("callysto/${img}.png");
 	$name = 'src-' . base64_encode($source['source']);
-	echo '<button type="submit" class="authsource" name="' . htmlspecialchars($name) . 
+	echo '<button type="submit" class="authsource" name="' . htmlspecialchars($name) .
 	     '"' . $autofocus . ' value="' . htmlspecialchars($this->t($source['text'])) . '" >
                 <img src="' . $img_url . '" height="200" alt="submit" /><br>' .
 		htmlspecialchars($this->t($source['text'])) . '
@@ -31,7 +31,6 @@ foreach($this->data['sources'] as $source) {
 </ul>
 </form>
 
-<p class="register"><?php echo $this->t('{callysto:callysto:register_here_text}'); ?></p>
 <p class="trouble"><?php echo $this->t('{callysto:callysto:having_trouble_text}'); ?></p>
 
 <?php $this->includeAtTemplateBase('includes/footer.php');
