@@ -21,9 +21,9 @@ foreach($this->data['sources'] as $source) {
 	$img_url = SimpleSAML\Module::getModuleURL("callysto/${img}.png");
 	$name = 'src-' . base64_encode($source['source']);
 	echo '<button type="submit" class="authsource" name="' . htmlspecialchars($name) . 
-	     '"' . $autofocus . ' value="' . htmlspecialchars($this->t($source['text'])) . '" >
+	     '"' . $autofocus . ' value="' . htmlspecialchars($source['text']) . '" >
                 <img src="' . $img_url . '" height="200" alt="submit" /><br>' .
-		htmlspecialchars($this->t($source['text'])) . '
+		htmlspecialchars($source['text']) . '
 	     </button>';
 	echo '</li>';
 }
