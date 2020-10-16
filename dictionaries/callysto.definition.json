@@ -1,6 +1,6 @@
 {
 	"welcome": {
-		"en": "Welcome to Data Science for Entrepreneurs!"
+		"en": "Welcome to Data Science for Albertans!"
 	},
 
 	"select_source_header": {
@@ -28,7 +28,7 @@
 	},
 
 	"logout_title": {
-		"en": "Thank you for using Data Science for Entrepreneurs."
+		"en": "Thank you for using Data Science for Albertans."
 	},
 
 	"logout_text": {
