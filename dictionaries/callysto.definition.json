@@ -1,6 +1,6 @@
 {
 	"welcome": {
-		"en": "Welcome to Data Science for Albertans!"
+		"en": "Welcome to Data Science for Albertans' Jupyterhub environment!"
 	},
 
 	"select_source_header": {
@@ -28,7 +28,7 @@
 	},
 
 	"logout_title": {
-		"en": "Thank you for using Data Science for Albertans."
+		"en": "Thank you for using Data Science for Albertans' Jupyterhub environment."
 	},
 
 	"logout_text": {
